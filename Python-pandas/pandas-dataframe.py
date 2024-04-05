@@ -28,4 +28,5 @@ print("取得薪水的平均值 : ", salaries.mean())
 # 建立新的欄位
 data["revenue"] = [500000, 400000, 300000] # data[新欄位名稱] = List
 data["rank"] = pd.Series([3, 6, 1], index = ["a", "b", "c"]) # data[新欄位名稱] = Series
+data["cp"] = data["salary"] / data["revenue"] # cp = 薪水 / 營收
 print(data)
