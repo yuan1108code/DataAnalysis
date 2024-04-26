@@ -38,4 +38,7 @@ for row in reader:
             , color = color
             , width = 0.1)
     
+    plt.xlabel("日期")
+    plt.ylabel("價格")
+    plt.title("個股的股價走勢")
 plt.show()
