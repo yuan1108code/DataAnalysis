@@ -5,10 +5,6 @@ x = np.linspace(-3, 3, 50)
 y1 = 2 * x + 1
 y2 = x ** 2
 
-plt.figure(num=3, figsize=(10, 10))
-plt.plot(x, y2)
-plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--')
-
 plt.xlim(-1, 2)
 plt.ylim(-2, 3)
 plt.xlabel("I am x")
@@ -32,5 +28,10 @@ ax.yaxis.set_ticks_position('left')
 ax.spines['bottom'].set_position(('data', -1)) # 讓座標從 -1 起始！
 ax.spines['left'].set_position(('data', 0)) # 從 x 軸的 0 開始！
 
+plt.figure(num=3, figsize=(10, 10))
+Line1, = plt.plot(x, y2, label = 'Up')
+Line2, = plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--', label = 'Down')
+
+plt.legend(handles = [Line1, Line2,], labels = ['AAA', 'BBB'], loc = 'best')
 plt.show()
 
